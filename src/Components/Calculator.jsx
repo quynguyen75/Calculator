@@ -26,6 +26,7 @@ function checkMaxLength(str = "") {
 const reducer = (prevState, action) => {
   switch (action.type) {
     case "number":
+      // operand1
       if (prevState.operand1 === null && prevState.operand2 === null) {
         return {
           ...prevState,
@@ -33,6 +34,7 @@ const reducer = (prevState, action) => {
         };
       }
 
+      // operand1
       if (prevState.operand1 !== null && prevState.operator === null) {
         if (checkMaxLength(prevState.operand1)) {
           return {
@@ -46,6 +48,7 @@ const reducer = (prevState, action) => {
         };
       }
 
+      // operand2
       if (prevState.operator !== null) {
         if (prevState.operand2 !== null && checkMaxLength(prevState.operand2)) {
           return {
@@ -81,6 +84,7 @@ const reducer = (prevState, action) => {
         }
       }
 
+      // have 2 operand
       if (prevState.operand1 !== null && prevState.operand2 !== null) {
         const result =
           calculateFromString(
@@ -95,6 +99,7 @@ const reducer = (prevState, action) => {
         };
       }
 
+      // haven't operand2
       if (prevState.operand2 === null) {
         return {
           ...prevState,
@@ -103,6 +108,7 @@ const reducer = (prevState, action) => {
       }
 
     case "equal":
+      // have 2 operand
       if (prevState.operand1 !== null && prevState.operand2 !== null) {
         return {
           ...prevState,
@@ -114,6 +120,7 @@ const reducer = (prevState, action) => {
         };
       }
 
+      // haven't operand2
       if (
         (prevState.operand2 === null && prevState.operator !== null) ||
         prevState.operand1
@@ -136,6 +143,7 @@ const reducer = (prevState, action) => {
       }
 
       if (action.content === "⌫") {
+        // operand2
         if (prevState.operand2 !== null) {
           const newOperand =
             prevState.operand2 && prevState.operand2.slice(0, -1);
@@ -146,6 +154,7 @@ const reducer = (prevState, action) => {
           };
         }
 
+        // operator
         if (prevState.operator !== null) {
           return {
             ...prevState,
@@ -155,6 +164,7 @@ const reducer = (prevState, action) => {
         const newOperand =
           prevState.operand1 && prevState.operand1.slice(0, -1);
 
+        // operand 1
         return {
           ...prevState,
           operand1: Number(newOperand) ? newOperand : null,
