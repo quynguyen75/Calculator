@@ -1,0 +1,33 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+
+  font-size: 1.2rem;
+  background-color: #272b33;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: translateY(4px);
+}
+
+.button.red {
+  color: #ec6666;
+}
+
+.button.white {
+  color: #efefef;
+}
+
+.button.blue {
+  color: #26fdd6;
+}
+
+@media (min-width: 576px) {
+  .button {
+    font-size: 1.5rem;
+  }
+}

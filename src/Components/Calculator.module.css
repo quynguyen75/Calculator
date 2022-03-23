@@ -1,0 +1,37 @@
+.calculator {
+  width: 100%;
+  background-color: #22252d;
+  border-radius: 2rem;
+
+  color: #eee;
+}
+
+@media (min-width: 576px) {
+  .calculator {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .calculator {
+    width: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  .calculator {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .calculator {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .calculator {
+    width: 30%;
+  }
+}

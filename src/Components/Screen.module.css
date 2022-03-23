@@ -1,0 +1,28 @@
+.screen {
+  padding: 2rem 1rem;
+
+  font-size: 1.2rem;
+  text-align: right;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.history {
+  height: 28px;
+}
+
+.result {
+  height: 70px;
+  word-break: break-all;
+}
+
+@media (min-width: 576px) {
+  .screen {
+    font-size: 1.5rem;
+  }
+
+  .result {
+    height: auto;
+  }
+}
