@@ -1,5 +1,25 @@
 const buttons = [
   {
+    content: "MC",
+    color: "blue",
+    type: "memory",
+  },
+  {
+    content: "MR",
+    color: "blue",
+    type: "memory",
+  },
+  {
+    content: "M+",
+    color: "blue",
+    type: "memory",
+  },
+  {
+    content: "M-",
+    color: "blue",
+    type: "memory",
+  },
+  {
     content: "AC",
     color: "blue",
     type: "clear",

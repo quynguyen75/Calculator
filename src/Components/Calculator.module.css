@@ -1,9 +1,11 @@
 .calculator {
+  position: relative;
   width: 100%;
   background-color: #22252d;
   border-radius: 2rem;
 
   color: #eee;
+  overflow: hidden;
 }
 
 @media (min-width: 576px) {

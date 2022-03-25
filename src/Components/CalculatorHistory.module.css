@@ -1,0 +1,67 @@
+.history {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #292d36;
+
+  padding: 3rem 1rem;
+  animation: flyIn 0.1s ease-in;
+}
+
+.button {
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.close {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+}
+
+.remove {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 1rem;
+}
+
+.history__list {
+  overflow-y: scroll;
+  max-height: 100%;
+}
+
+.history__list::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.history__list::-webkit-scrollbar-thumb {
+  background-color: #777;
+  border-radius: 0.2rem;
+}
+
+.history__message {
+  color: #ddd;
+}
+
+@keyframes flyIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.history::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.history::-webkit-scrollbar-thumb {
+  background-color: #555;
+}
